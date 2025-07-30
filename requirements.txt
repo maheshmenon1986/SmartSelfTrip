@@ -7,3 +7,4 @@ rapidfuzz
 streamlit-date-picker
 folium
 sentence-transformers
+polyline
