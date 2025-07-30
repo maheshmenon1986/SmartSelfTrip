@@ -1,0 +1,8 @@
+streamlit>=1.23.0  # Or just 'streamlit' to pull the latest
+pandas
+openpyxl
+sqlalchemy
+rapidfuzz
+streamlit-date-picker
+folium
+# Add any other libraries your app directly imports and uses
