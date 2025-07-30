@@ -6,3 +6,4 @@ sqlalchemy
 rapidfuzz
 streamlit-date-picker
 folium
+sentence-transformers
