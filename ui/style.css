@@ -1,0 +1,151 @@
+# --- Dynamic Custom CSS based on state ---
+active_background_url = RESULT_BACKGROUND_IMAGE_URL if st.session_state.show_results else BACKGROUND_IMAGE_URL
+main_block_bg_color = "#FFFFFF" if st.session_state.show_results else "transparent"
+sidebar_bg_color = "#f0f2f6" if st.session_state.show_results else "transparent"
+
+custom_css = f"""
+<style>
+/* Base Streamlit App Background - Dynamically set */
+.stApp {{
+    background-image: url("{active_background_url}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: transparent; /* Ensure this doesn't hide the image */
+}}
+
+/* Your existing CSS styling below, adjusted for dynamic backgrounds */
+
+/* Existing rule for generic 1g6x8q - keep if it applies to other elements too */
+.st-emotion-cache-1g6x8q {{
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: none;
+    padding: 15px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end !important;
+    height: 100% !important;
+    min-height: 0 !important;
+}}
+
+/* NEW RULE: Add this block for the specific container you identified */
+.st-emotion-cache-mc20ew {{
+    display: block;
+    border-radius: 15px;
+    padding: calc(-1px + 1rem);
+    height: 460px;
+    overflow: auto;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}}
+
+#text
+div[data-testid="stVerticalBlock"] > div > div.st-emotion-cache-1g6x8q {{
+    justify-content: flex-end !important;
+    height: 100% !important;
+    min-height: 0 !important;
+
+}}
+
+div[data-testid="stChatMessage"] {{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 99%;
+    word-wrap: break-word;
+    margin-top: 40px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}}
+
+div[data-testid="stChatMessage"] div[data-testid="stMarkdownContainer"] p {{
+    font-size: 1.1em;
+}}
+
+div[data-testid="stChatMessage"].stChatMessage-user {{
+    background-color: #E6F7FF;
+    margin-left: auto;
+    margin-right: 0;
+}}
+
+div[data-testid="stChatMessage"].stChatMessage-assistant {{
+    background-color: #FFFFFF;
+    margin-right: auto;
+    margin-left: 0;
+    align-self: flex-start;
+}}
+
+div[data-testid="stChatInput"] {{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}}
+
+/* Main content block background */
+.main .block-container {{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.5s ease-in-out;
+    background-color: {main_block_bg_color}; /* Dynamic background */
+}}
+.main .block-container * {{ /* This will make ALL text inside the main content block white */
+    color: white !important;
+}}
+
+/* Side/Chat panel background (often st-emotion-cache-vk3304 or similar) */
+.st-emotion-cache-vk3304 {{
+    background-color: {sidebar_bg_color}; /* Dynamic background */
+    transition: background-color 0.5s ease-in-out;
+}}
+
+.title-tagline-box {{
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    margin-left: auto;
+    margin-top: 450px;
+}}
+
+.title-tagline-box h1 {{
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}}
+.title-tagline-box p {{
+    font-size: 1.5em;
+    color: #555;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}}
+
+body {{
+    font-family: 'Inter', sans-serif;
+}}
+
+.st-emotion-cache-1fm0v0 {{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}}
+
+</style>
+"""
+
+# Apply custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)

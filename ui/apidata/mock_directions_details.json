@@ -1,0 +1,134 @@
+{
+  "Tower of London-London Eye-transit": [
+    {
+      "legs": [
+        {
+          "steps": [
+            {
+              "html_instructions": "Walk to **Tower Gateway DLR Station**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.3 km", "value": 298},
+              "duration": {"text": "4 mins", "value": 240}
+            },
+            {
+              "html_instructions": "Take **DLR** towards **Bank** from **Tower Gateway DLR Station** to **Bank**",
+              "travel_mode": "TRANSIT",
+              "distance": {"text": "2.2 km", "value": 2186},
+              "duration": {"text": "9 mins", "value": 540},
+              "transit_details": {
+                "arrival_stop": {"name": "Bank", "location": {"lat": 51.514787, "lng": -0.088613}},
+                "departure_stop": {"name": "Tower Gateway DLR Station", "location": {"lat": 51.5141, "lng": -0.07689}},
+                "headsign": "Bank",
+                "line": {"name": "DLR", "short_name": "DLR", "vehicle": {"type": "LIGHT_RAIL"}},
+                "num_stops": 3
+              }
+            },
+            {
+              "html_instructions": "Walk to **London Eye**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.8 km", "value": 800},
+              "duration": {"text": "10 mins", "value": 600}
+            }
+          ]
+        }
+      ],
+      "overview_polyline": {
+        "points": "gn`eH`i}@p`l@f_tAqG{sB?cEw@_`CkB_jAm@qWq@eNq@eLq@gN`j@kS{e@iL_}@~`@mS_c@_hC{@y@eD_i@_q@k_@iM{@hLg@iM\\jI"
+      }
+    }
+  ],
+  "London Eye-Westminster Abbey-walking": [
+    {
+      "legs": [
+        {
+          "steps": [
+            {
+              "html_instructions": "Walk across **Westminster Bridge**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.4 km", "value": 400},
+              "duration": {"text": "5 mins", "value": 300}
+            },
+            {
+              "html_instructions": "Turn right into **Parliament Square**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.1 km", "value": 100},
+              "duration": {"text": "1 min", "value": 60}
+            }
+          ]
+        }
+      ],
+      "overview_polyline": {
+        "points": "g~`eHlctA`ctA~_r@"
+      }
+    }
+  ],
+  "Westminster Abbey-Buckingham Palace-walking": [
+    {
+      "legs": [
+        {
+          "steps": [
+            {
+              "html_instructions": "Head north on **Parliamentsdafffasdasdd Square**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.2 km", "value": 200},
+              "duration": {"text": "2 mins", "value": 120}
+            },
+            {
+              "html_instructions": "Turn left onto **Birdcage Walk**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.8 km", "value": 800},
+              "duration": {"text": "10 mins", "value": 600}
+            },
+            {
+              "html_instructions": "Turn right onto **The Mall**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.2 km", "value": 200},
+              "duration": {"text": "2 mins", "value": 120}
+            }
+          ]
+        }
+      ],
+      "overview_polyline": {
+        "points": "w{aeH|kt@dftA~_r@bW~gA`Q~eA"
+      }
+    }
+  ],
+  "Buckingham Palace-British Museum-transit": [
+    {
+      "legs": [
+        {
+          "steps": [
+            {
+              "html_instructions": "Walk to **Green Park Station**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.5 km", "value": 500},
+              "duration": {"text": "6 mins", "value": 360}
+            },
+            {
+              "html_instructions": "Take **Victoria Line** towards **Walthamstow Central** from **Green Park** to **Euston**",
+              "travel_mode": "TRANSIT",
+              "distance": {"text": "2.0 km", "value": 2000},
+              "duration": {"text": "7 mins", "value": 420},
+              "transit_details": {
+                "arrival_stop": {"name": "Euston", "location": {"lat": 51.5283, "lng": -0.1337}},
+                "departure_stop": {"name": "Green Park", "location": {"lat": 51.5068, "lng": -0.1427}},
+                "headsign": "Walthamstow Central",
+                "line": {"name": "Victoria Line", "short_name": "Victoria", "vehicle": {"type": "SUBWAY"}},
+                "num_stops": 3
+              }
+            },
+            {
+              "html_instructions": "Walk to **British Museum**",
+              "travel_mode": "WALKING",
+              "distance": {"text": "0.8 km", "value": 800},
+              "duration": {"text": "10 mins", "value": 600}
+            }
+          ]
+        }
+      ],
+      "overview_polyline": {
+        "points": "i_aeH`dtA~_r@jZ_k@gS|w@sC_wA}@sL}v@u@sQe@_O~j@g_@vM_d@gLp_@w`@gN~`@oF"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "destination_addresses": [
+    "Tower of London, London EC3N 4AB, UK",
+    "London Eye, Riverside Building, County Hall, London SE1 7PB, UK",
+    "Westminster Abbey, 20 Deans Yd, London SW1P 3PA, UK",
+    "Buckingham Palace, London SW1A 1AA, UK",
+    "British Museum, Great Russell St, London WC1B 3DG, UK"
+  ],
+  "origin_addresses": [
+    "Tower of London, London EC3N 4AB, UK",
+    "London Eye, Riverside Building, County Hall, London SE1 7PB, UK",
+    "Westminster Abbey, 20 Deans Yd, London SW1P 3PA, UK",
+    "Buckingham Palace, London SW1A 1AA, UK",
+    "British Museum, Great Russell St, London WC1B 3DG, UK"
+  ],
+  "rows": [
+    {
+      "elements": [
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "2.5 km", "value": 2500}, "duration": {"text": "15 mins", "value": 900}, "status": "OK"},
+        {"distance": {"text": "3.0 km", "value": 3000}, "duration": {"text": "20 mins", "value": 1200}, "status": "OK"},
+        {"distance": {"text": "3.5 km", "value": 3500}, "duration": {"text": "25 mins", "value": 1500}, "status": "OK"},
+        {"status": "ZERO_RESULTS"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "2.5 km", "value": 2500}, "duration": {"text": "15 mins", "value": 900}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "0.8 km", "value": 800}, "duration": {"text": "8 mins", "value": 480}, "status": "OK"},
+        {"distance": {"text": "1.0 km", "value": 1000}, "duration": {"text": "10 mins", "value": 600}, "status": "OK"},
+        {"distance": {"text": "2.0 km", "value": 2000}, "duration": {"text": "12 mins", "value": 720}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "3.0 km", "value": 3000}, "duration": {"text": "20 mins", "value": 1200}, "status": "OK"},
+        {"distance": {"text": "0.8 km", "value": 800}, "duration": {"text": "8 mins", "value": 480}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "0.5 km", "value": 500}, "duration": {"text": "5 mins", "value": 300}, "status": "OK"},
+        {"distance": {"text": "1.5 km", "value": 1500}, "duration": {"text": "10 mins", "value": 600}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "3.5 km", "value": 3500}, "duration": {"text": "25 mins", "value": 1500}, "status": "OK"},
+        {"distance": {"text": "1.0 km", "value": 1000}, "duration": {"text": "10 mins", "value": 600}, "status": "OK"},
+        {"distance": {"text": "0.5 km", "value": 500}, "duration": {"text": "5 mins", "value": 300}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "1.0 km", "value": 1000}, "duration": {"text": "8 mins", "value": 480}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"status": "ZERO_RESULTS"},
+        {"distance": {"text": "2.0 km", "value": 2000}, "duration": {"text": "12 mins", "value": 720}, "status": "OK"},
+        {"distance": {"text": "1.5 km", "value": 1500}, "duration": {"text": "10 mins", "value": 600}, "status": "OK"},
+        {"distance": {"text": "1.0 km", "value": 1000}, "duration": {"text": "8 mins", "value": 480}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"}
+      ]
+    }
+  ],
+  "status": "OK"
+}

@@ -1,0 +1,64 @@
+{
+  "destination_addresses": [
+    "Tower of London, London EC3N 4AB, UK",
+    "London Eye, Riverside Building, County Hall, London SE1 7PB, UK",
+    "Westminster Abbey, 20 Deans Yd, London SW1P 3PA, UK",
+    "Buckingham Palace, London SW1A 1AA, UK",
+    "British Museum, Great Russell St, London WC1B 3DG, UK"
+  ],
+  "origin_addresses": [
+    "Tower of London, London EC3N 4AB, UK",
+    "London Eye, Riverside Building, County Hall, London SE1 7PB, UK",
+    "Westminster Abbey, 20 Deans Yd, London SW1P 3PA, UK",
+    "Buckingham Palace, London SW1A 1AA, UK",
+    "British Museum, Great Russell St, London WC1B 3DG, UK"
+  ],
+  "rows": [
+    {
+      "elements": [
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "3.5 km", "value": 3500}, "duration": {"text": "45 mins", "value": 2700}, "status": "OK"},
+        {"distance": {"text": "4.0 km", "value": 4000}, "duration": {"text": "50 mins", "value": 3000}, "status": "OK"},
+        {"distance": {"text": "4.5 km", "value": 4500}, "duration": {"text": "55 mins", "value": 3300}, "status": "OK"},
+        {"distance": {"text": "3.8 km", "value": 3800}, "duration": {"text": "48 mins", "value": 2880}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "3.5 km", "value": 3500}, "duration": {"text": "45 mins", "value": 2700}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "0.5 km", "value": 500}, "duration": {"text": "6 mins", "value": 360}, "status": "OK"},
+        {"distance": {"text": "1.5 km", "value": 1500}, "duration": {"text": "18 mins", "value": 1080}, "status": "OK"},
+        {"distance": {"text": "3.0 km", "value": 3000}, "duration": {"text": "35 mins", "value": 2100}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "4.0 km", "value": 4000}, "duration": {"text": "50 mins", "value": 3000}, "status": "OK"},
+        {"distance": {"text": "0.5 km", "value": 500}, "duration": {"text": "6 mins", "value": 360}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "1.0 km", "value": 1000}, "duration": {"text": "13 mins", "value": 780}, "status": "OK"},
+        {"distance": {"text": "2.5 km", "value": 2500}, "duration": {"text": "30 mins", "value": 1800}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "4.5 km", "value": 4500}, "duration": {"text": "55 mins", "value": 3300}, "status": "OK"},
+        {"distance": {"text": "1.5 km", "value": 1500}, "duration": {"text": "18 mins", "value": 1080}, "status": "OK"},
+        {"distance": {"text": "1.0 km", "value": 1000}, "duration": {"text": "13 mins", "value": 780}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"},
+        {"distance": {"text": "2.0 km", "value": 2000}, "duration": {"text": "25 mins", "value": 1500}, "status": "OK"}
+      ]
+    },
+    {
+      "elements": [
+        {"distance": {"text": "3.0 km", "value": 3000}, "duration": {"text": "40 mins", "value": 2400}, "status": "OK"},
+        {"distance": {"text": "3.0 km", "value": 3000}, "duration": {"text": "35 mins", "value": 2100}, "status": "OK"},
+        {"distance": {"text": "2.5 km", "value": 2500}, "duration": {"text": "30 mins", "value": 1800}, "status": "OK"},
+        {"distance": {"text": "2.0 km", "value": 2000}, "duration": {"text": "25 mins", "value": 1500}, "status": "OK"},
+        {"distance": {"text": "1 m", "value": 0}, "duration": {"text": "1 min", "value": 0}, "status": "OK"}
+      ]
+    }
+  ],
+  "status": "OK"
+}

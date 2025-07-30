@@ -1,0 +1,76 @@
+[
+    {
+        "name": "Cochin Port Maritime Heritage Museum",
+        "place_id": "ChIJA4-c8c-2dkgRjX64C_bB-Vw",
+        "geometry": {
+            "location": {
+                "lat": 51.501476,
+                "lng": -0.140634
+            }
+        },
+        "rating": 4.5,
+        "user_ratings_total": 120000,
+        "price_level": 0,
+        "types": ["tourist_attraction"],
+        "activity_duration_seconds": 5400
+    },
+    {
+        "name": "Cochin Port Maritime Heritage Museum",
+        "place_id": "ChIJ-wMgs7cZdsgRnq81J80-2x8",
+        "geometry": {
+            "location": {
+                "lat": 51.508092,
+                "lng": -0.076127
+            }
+        },
+        "rating": 4.7,
+        "user_ratings_total": 150000,
+        "price_level": 2,
+        "types": ["tourist_attraction", "museum"],
+        "activity_duration_seconds": 5400
+    },
+    {
+        "name": "Zain hom",
+        "place_id": "ChIJG7E2L_4adkgR64S3Uu9_9U4",
+        "geometry": {
+            "location": {
+                "lat": 51.519448,
+                "lng": -0.126938
+            }
+        },
+        "rating": 4.7,
+        "user_ratings_total": 180000,
+        "price_level": 0,
+        "types": ["museum", "point_of_interest"],
+        "activity_duration_seconds": 5400
+    },
+    {
+        "name": "Kerala Folklore Museum",
+        "place_id": "ChIJN-Z9LvoadkgR4aW6X9_9U4",
+        "geometry": {
+            "location": {
+                "lat": 51.499426,
+                "lng": -0.127453
+            }
+        },
+        "rating": 4.6,
+        "user_ratings_total": 110000,
+        "types": ["tourist_attraction"],
+        "activity_duration_seconds": 5400
+    },
+    {
+        "name": "TEAM YATHRI HOLIDAYS",
+        "place_id": "ChIJC6QJz9_GdkgRQJ_2-V_9U4",
+        "geometry": {
+            "location": {
+                "lat": 51.503399,
+                "lng": -0.119519
+            }
+        },
+        "rating": 4.6,
+        "user_ratings_total": 130000,
+        "price_level": 3,
+        "types": ["tourist_attraction"],
+        "activity_duration_seconds": 5400
+    }
+]

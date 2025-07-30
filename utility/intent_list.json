@@ -1,0 +1,102 @@
+{
+    "intents": {
+        "plan_trip": {
+            "samples": [
+                "Plan a cheap trip, no taxis",
+                "I want a budget trip",
+                "Plan a low cost trip",
+                "Plan a trip to {destination_city}",
+                "I want to plan a trip",
+                "to search for a new trip in another city",
+                "city",
+                "London","Newyork","Toronto",
+                "Another city",
+                "I want to plan a trip"
+            ],
+            "slots": [
+                {
+                    "name": "destination_city",
+                    "type": "CITY",
+                    "required": true,
+                    "prompt": "Which city would you like to explore?"
+                },
+                {
+                    "name": "place_type",
+                    "type": "PLACE_TYPE",
+                    "required": true,
+                    "prompt": "What kind of places do you want to visit?",
+                    "options": ["museum", "tourist_attraction","library", "shopping_mall","landmark"],
+                    "confirmation_required": true
+                },
+                {
+                    "name": "duration",
+                    "type": "DROPDOWN",
+                    "required": true,
+                    "prompt": "Number of days?",
+                    "options": ["1"]
+                }
+            ],
+            "responses": [
+                "Details for your inquiry. You may type 'Plan a new trip' for searching new location"
+            ],
+            "next_intent": null,
+            "end_conversation": true
+        },
+        "fallback": {
+            "samples": [],
+            "responses": [
+                "Sorry, I couldn't understand that. Could you please repeat?",
+                "I didn't quite get that. Can you try rephrasing?"
+            ],
+            "slots": []
+        },
+        "change_itinerary_start_time": {
+            "samples": [
+                "Can you start the itinerary from {new_start_time}",
+                "Start from {new_start_time}",
+                "Change the start time to {new_start_time}",
+                "Can we start at {new_start_time} instead?",
+                "Move the start time to {new_start_time}",
+                "Can you start the time",
+                "Change the start time"
+            ],
+            "slots": [
+                {
+                    "name": "new_start_time",
+                    "required": true,
+                    "prompt": "What time would you like the itinerary to start?",
+                    "type": "TIME"
+                }
+            ],
+            "responses": [
+                "Okay, I'll regenerate your itinerary starting from {new_start_time}."
+            ]
+        },
+        "add_place": {
+            "training_phrases": [
+                "add a place",
+                "add another stop",
+                "include this place",
+                "can I add a specific location",
+                "add a new place",
+                "I want to add a place",
+                "append a place",
+                "add London Eye",
+                "include the Empire State Building",
+                "add the Colosseum"
+            ],
+            "slots": [
+                {
+                    "name": "place_name",
+                    "prompt": "What's the name of the place you'd like to add?",
+                    "type": "TEXT",
+                    "required": true
+                }
+            ],
+            "responses": [
+                "Okay, I'll try to add '{place_name}' to your trip in {city}! Please wait while I recalculate the best route.",
+                "Adding '{place_name}' to your itinerary. Recalculating..."
+            ]
+        }
+    }
+}
