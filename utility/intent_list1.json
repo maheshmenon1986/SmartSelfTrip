@@ -50,8 +50,30 @@
             ],
             "slots": []
         },
-        "add_place": {
+        "change_itinerary_start_time": {
             "samples": [
+                "Can you start the itinerary from {new_start_time}",
+                "Start from {new_start_time}",
+                "Change the start time to {new_start_time}",
+                "Can we start at {new_start_time} instead?",
+                "Move the start time to {new_start_time}",
+                "Can you start the time",
+                "Change the start time"
+            ],
+            "slots": [
+                {
+                    "name": "new_start_time",
+                    "required": true,
+                    "prompt": "What time would you like the itinerary to start?",
+                    "type": "TIME"
+                }
+            ],
+            "responses": [
+                "Okay, I'll regenerate your itinerary starting from {new_start_time}."
+            ]
+        },
+        "add_place": {
+            "training_phrases": [
                 "add a place",
                 "add another stop",
                 "include this place",
@@ -61,8 +83,7 @@
                 "append a place",
                 "add London Eye",
                 "include the Empire State Building",
-                "add the Colosseum",
-                "add a spot"
+                "add the Colosseum"
             ],
             "slots": [
                 {
@@ -73,7 +94,8 @@
                 }
             ],
             "responses": [
-                "Adding place to your itinerary. Recalculating..."
+                "Okay, I'll try to add '{place_name}' to your trip in {city}! Please wait while I recalculate the best route.",
+                "Adding '{place_name}' to your itinerary. Recalculating..."
             ]
         }
     }

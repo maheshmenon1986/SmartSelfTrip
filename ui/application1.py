@@ -11,7 +11,6 @@ import datetime
 
 # Add the project root to sys.path
 current_dir = os.path.dirname(os.path.abspath(__file__))
-
 project_root = os.path.abspath(os.path.join(current_dir, ".."))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
@@ -32,7 +31,7 @@ if "history" not in st.session_state:
     st.session_state.history = [
         {
             "role": "assistant",
-            "content": "Can’t figure out where to go? \n\n Let us help you plan your smooth and fun trip — powered by Google Maps"
+            "content": "Can’t figure out where to go? \n\n Let me help you plan a smooth and fun trip — powered by Google Maps"
         },
         {
             "role": "assistant",
@@ -80,9 +79,6 @@ if "direction_details" not in st.session_state: # This initializes it
 
 # Toggle to use live Google API or mock data
 use_live_api = True
-
-
-FALLBACK_IMAGE_PATH = os.path.join(current_dir, "..", "utility", "images", "welcomescreen.jpg")
 
 # --- Function to get Base64 encoded image ---
 def get_base64_image(image_path):
@@ -1721,7 +1717,7 @@ def get_entry_fee(price_level):
     return 0 # Fallback
 
 # --- Layout Columns ---
-col_chat, col_main_content = st.columns([0.2,0.5])
+col_chat, col_main_content = st.columns([0.2, 0.7])
 
 with col_chat:
     with st.container(height=460):
@@ -2003,7 +1999,7 @@ with col_main_content:
             """ 
             <div class="title-tagline-box">
                 <h1>Smart2SelfTrip</h1>
-                <p>Discover Your Perfect Day Trip</p>
+                <p>Plan Your Perfect Day Trip in a Snap</p>
             </div>
             """,
             unsafe_allow_html=True
@@ -2160,7 +2156,6 @@ with col_main_content:
 
                             with col_image:
                                 main_image_url = None
-                                location_image_url = ''
                                 if trip_place and trip_place != "Not Specified":
                                     # Get the Place ID for the destination ci   ty
                                     destination_place_id = get_place_id_from_name(trip_place, GOOGLE_API_KEY)
@@ -2174,20 +2169,26 @@ with col_main_content:
                                             photo_reference = destination_details['photos'][0].get('photo_reference')
                                             if photo_reference:
                                                 main_image_url = get_place_photo_url(photo_reference, max_width=600)
-                                                if main_image_url:
-                                                    location_image_url = f'<img src="{main_image_url}" style="width:300px; height:300px; border-radius: 8px; margin-top: 10px;">' if main_image_url else ''
-                                                    st.markdown(f"""
-                                                            <div class="location_image">
-                                                                {location_image_url} 
-                                                                <h1 style="font-weight: bold; font-size: 1.2em;"><strong>Destination: </strong>{trip_place.upper()}</h1>
-                                                            </div>
-                                                            """, unsafe_allow_html=True)
-                                                else:
-                                                    print("No Image")
+                                                location_image_url = f'<img src="{main_image_url}" style="width:300px; height:300px; border-radius: 8px; margin-top: 10px;">' if main_image_url else ''
+                                            else:
+                                                st.write(f"*(No photo reference found for {trip_place} in details)*")
+                                        else:
+                                            st.write(f"*(No photo details found for {trip_place})*")
+                                    else:
+                                        st.write(f"*(Could not get Place ID for {trip_place})*")
+                                else:
+                                    st.write(f"*(Trip destination not specified)*")
+
+                                st.markdown(f"""
+                                        <div class="location_image">
+                                            {location_image_url} 
+                                            <h1 style="font-weight: bold; font-size: 1.2em;"><strong>Destination: </strong>{trip_place.upper()}</h1>
+                                        </div>
+                                        """, unsafe_allow_html=True)
 
                             with col_summary:
-                                #Summary title section
-                                st.markdown(f"""
+                                        #Summary title section
+                                        st.markdown(f"""
                                         <div class="summary-top">
                                         <h1>Summary</h1>
                                         <p><strong>Total estimated expense: </strong>${total_expense:.2f}</p>
@@ -2195,6 +2196,9 @@ with col_main_content:
                                         <p><strong>Optimal Route: </strong>{' <strong>→</strong> '.join(optimal_route_names)}</p>
                                     </div>
                                     """, unsafe_allow_html=True)
+
+
+
 
                             #STOP POINTS
                             place_name_to_full_data = {p['name']: p for p in st.session_state.places_results}
@@ -2218,18 +2222,21 @@ with col_main_content:
 
                                         # --- Logic to get IMAGE URL (must be before the markdown block) ---
 
-                                        image_url = None
-                                        if 'photos' in place_data and place_data['photos']:
-                                            # Get the photo_reference of the first photo
-                                            photo_reference = place_data['photos'][0].get('photo_reference')
-                                            if photo_reference:
-                                                # Call the helper function to get the direct image URL
-                                                # Make sure get_place_photo_url is defined elsewhere in your script
-                                                image_url = get_place_photo_url(photo_reference, max_width=400) # You can adjust max_width
+                                        # image_url = None
+                                        # if 'photos' in place_data and place_data['photos']:
+                                        #     # Get the photo_reference of the first photo
+                                        #     photo_reference = place_data['photos'][0].get('photo_reference')
+                                        #     if photo_reference:
+                                        #         # Call the helper function to get the direct image URL
+                                        #         # Make sure get_place_photo_url is defined elsewhere in your script
+                                        #         image_url = get_place_photo_url(photo_reference, max_width=400) # You can adjust max_width
+                                        #
+                                        # # # --- END IMAGE URL LOGIC -
+                                        #
+                                        # # Create the image HTML string
+                                        # image_html = f'<img src="{image_url}" style="width:300px; height:200px; border-radius: 8px; margin-top: 10px;">' if image_url else ''
 
-                                        # # --- END IMAGE URL LOGIC -
-                                        # Create the image HTML string
-                                        image_html = f'<img src="{image_url}" style="width:300px; height:200px; border-radius: 8px; margin-top: 10px;">' if image_url else ''
+                                        image_html=0
 
                                         formatted_types = [t.replace('_', ' ').title() for t in place_types]
                                         types_str = ", ".join(formatted_types) if formatted_types else "N/A"
